@@ -4,16 +4,16 @@ from rest_framework.response import Response
 from . import models
 from . import serializers
 from rest_framework import generics
+from rest_framework import viewsets
 # Create your views here.
 
 def index(request):
     return render(request, 'index.html', {})
 
-#class BookingView(APIView):
-#    def get(self, request):
-#        items = models.Booking.objects.all()
-#        serializer = serializers.BookingSerializer(items, many=True)
-#        return Response(serializer.data)
+class BookingViewSet(viewsets.ModelViewSet):
+    queryset = models.Booking.objects.all()
+    serializer_class = serializers.BookingSerializer
+
 
 class MenuItemView(generics.ListCreateAPIView):
     queryset = models.Menu.objects.all()
