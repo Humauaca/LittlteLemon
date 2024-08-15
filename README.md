@@ -2,6 +2,6 @@
 
 Links to check
 
-restaurant/booking
-restaurant/menu
-restaurant/menu/(some pk)
+restaurant/booking<br>
+restaurant/menu<br>
+restaurant/menu/(some pk)<br>
